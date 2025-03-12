@@ -1,6 +1,8 @@
 package org.example.springbootredis.model;
 
-public class Producto {
+import java.io.Serializable;
+
+public class Producto implements Serializable {
     private Long id;
     private String nombre;
     private Double precio;

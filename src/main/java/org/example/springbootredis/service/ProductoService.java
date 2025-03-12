@@ -15,6 +15,11 @@ public class ProductoService {
 
     @Cacheable(value = "productos")
     public List<Producto> obtenerProductos() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("📢 Consultando productos desde la base de datos...");
         return productos;
     }
